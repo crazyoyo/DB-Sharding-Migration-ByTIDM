@@ -1,2 +1,2 @@
 # DB-Sharding-Migration-ByTiDM
-RDBMS sharding migration by TiDB Data Migration
+RDBMS sharding migration to Amazon Aurora by TiDB Data Migration
