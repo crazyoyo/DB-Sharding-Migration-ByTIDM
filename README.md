@@ -1,2 +1,2 @@
-# DB-Sharding-Migration-ByTIDM
+# DB-Sharding-Migration-ByTiDM
 RDBMS sharding migration by TiDB Data Migration
