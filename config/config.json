@@ -1,0 +1,10 @@
+{
+    "tidm":{
+        "key_pair": "{your_key_pair_name}",
+        "instance_num": "3",
+        "instance_type": "t3.micro",
+        "ebs_volumn_size": "40",
+        "dm_name": "dm-migration",
+        "dm_version": "v6.0.0"
+    }
+}

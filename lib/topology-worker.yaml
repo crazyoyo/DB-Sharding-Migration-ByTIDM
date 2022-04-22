@@ -1,0 +1,8 @@
+  - host: {worker_server}
+    ssh_port: 22
+    port: {worker_port}
+    # deploy_dir: "/dm-deploy/dm-worker-8262"
+    # log_dir: "/dm-deploy/dm-worker-8262/log"
+    # numa_node: "0,1"
+    config:
+      log-level: info

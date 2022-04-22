@@ -1,0 +1,52 @@
+global:
+  user: "tidb"
+  ssh_port: 22
+  deploy_dir: "/dm-deploy"
+  data_dir: "/dm-data"
+
+server_configs:
+  master:
+    log-level: info
+  worker:
+    log-level: info
+
+master_servers:
+  - host: {master_server}
+    name: master
+    ssh_port: 22
+    port: 8261
+    # peer_port: 8291
+    # deploy_dir: "/dm-deploy/dm-master-8261"
+    # data_dir: "/dm-data/dm-master-8261"
+    # log_dir: "/dm-deploy/dm-master-8261/log"
+    # numa_node: "0,1"
+    config:
+      log-level: info
+      # rpc-timeout: "30s"
+      # rpc-rate-limit: 10.0
+      # rpc-rate-burst: 40
+
+worker_servers:
+{worker_server_placeholder}
+
+monitoring_servers:
+  - host: {monitoring_server}
+    ssh_port: 22
+    port: 9090
+    # deploy_dir: "/tidb-deploy/prometheus-8249"
+    # data_dir: "/tidb-data/prometheus-8249"
+    # log_dir: "/tidb-deploy/prometheus-8249/log"
+
+grafana_servers:
+  - host: {grafana_server}
+    port: 3000
+    # deploy_dir: /tidb-deploy/grafana-3000
+
+alertmanager_servers:
+  - host: {alertmanager_servers}
+    ssh_port: 22
+    web_port: 9093
+    # cluster_port: 9094
+    # deploy_dir: "/tidb-deploy/alertmanager-9093"
+    # data_dir: "/tidb-data/alertmanager-9093"
+    # log_dir: "/tidb-deploy/alertmanager-9093/log"
